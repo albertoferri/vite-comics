@@ -1,9 +1,11 @@
 <script>
 import AppNav from './components/AppNav.vue';
+import AppWip from './components/AppWip.vue';
 
 export default{
   components:{
     AppNav,
+    AppWip,
   }
 }
 
@@ -12,6 +14,7 @@ export default{
 <template>
 
   <AppNav></AppNav>
+  <AppWip></AppWip>
 
 </template>
 
