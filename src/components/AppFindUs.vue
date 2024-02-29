@@ -37,13 +37,20 @@ export default {
 </template>
 
 <style scoped lang="scss">
+// VARIABILI CSS
+$primaryColor: #0282f9;
+
+
+@mixin flex-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .container{
-    color: white;
     height: 155px;
-    background-color: #0282f9;
-    display: flex;
-    align-items: center;
+    background-color: $primaryColor;
+    @include flex-centered;
     
     #libraries{
         width: 1200px;

@@ -22,7 +22,6 @@ export default {
 <style scoped lang="scss">
 
 .container{
-  color: white;
   width: 1200px;
   height: 130px;
   margin: 0 auto;

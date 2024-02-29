@@ -28,13 +28,21 @@ export default {
 </template>
 
 <style scoped lang="scss">
+// VARIABILI CSS
+$primaryColor: #0282f9;
+
+
+@mixin flex-centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .container{
   background-color: white;
 
   nav{
-    display: flex;
-    align-items: center;
+    @include flex-centered;
     justify-content: space-between;
 
     width: 1200px;
@@ -59,6 +67,7 @@ export default {
       text-transform: uppercase;
       font-size: 12px;
       cursor: pointer;
+      color: black;
     }
 
   }
