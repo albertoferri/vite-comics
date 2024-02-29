@@ -34,14 +34,8 @@ export default {
 
 <style scoped lang="scss">
 // VARIABILI CSS
-$primaryColor: #0282f9;
-
-
-@mixin flex-centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@use '../_variables.scss' as *;
+@use '../mixin.scss' as *;
 
 .container{
   background-color: #303030;

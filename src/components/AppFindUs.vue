@@ -2,6 +2,18 @@
 <script>
 export default {
   name: 'AppFindUs',
+  data() {
+  return {
+    items: [
+      { img: '/img/buy-comics-digital-comics.png', label: 'Digital comics' },
+      { img: '/img/buy-comics-merchandise.png', label: 'DC merchandise' },
+      { img: '/img/buy-comics-subscriptions.png', label: 'Subscription' },
+      { img: '/img/buy-comics-shop-locator.png', label: 'Comic shop locator' },
+      { img: '/img/buy-dc-power-visa.svg', label: 'DC power visa' }
+    ]
+   }
+  }
+
 }
 
 </script>
@@ -11,41 +23,21 @@ export default {
 
 <div class="container">
     <ul id="libraries">
-        <li>
-            <img src="/img/buy-comics-digital-comics.png" alt="">
-            <span>Digital comics</span>
-        </li>
-        <li>
-            <img src="/img/buy-comics-merchandise.png" alt="">
-            <span>dc merchandise</span>
-        </li>
-        <li>
-            <img src="/img/buy-comics-subscriptions.png" alt="">
-            <span>subscription</span>
-        </li>
-        <li>
-            <img src="/img/buy-comics-shop-locator.png" alt="">
-            <span>comic shop locator</span>
-        </li>
-        <li>
-            <img src="/img/buy-dc-power-visa.svg" alt="">
-            <span>dc power visa</span>
-        </li>
-    </ul>
+  <li v-for="(item, index) in items" :key="index">
+    <img :src="item.img" :alt="item.label">
+    <span>{{ item.label }}</span>
+  </li>
+</ul>
+
 </div>
 
 </template>
 
 <style scoped lang="scss">
-// VARIABILI CSS
-$primaryColor: #0282f9;
+@use '../_variables.scss' as *;
+@use '../mixin.scss' as *;
 
 
-@mixin flex-centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .container{
     height: 155px;
@@ -59,31 +51,32 @@ $primaryColor: #0282f9;
         display: flex;
         justify-content: space-between;
         padding: 0;
-    }
 
-    li{
-        list-style-type: none;
-        text-transform: uppercase;
-        display: flex;
-        cursor: pointer;
-        
-
-        img{
-            max-width: 55px;
-            width: auto;
-            height: 55px;
-            vertical-align: middle;
-        }
-
-        span{
+        li{
+            list-style-type: none;
+            text-transform: uppercase;
             display: flex;
-            align-items: center;
-            width: 160px;
-            margin-left: 10px;
-            font-size: 14px;
-            font-weight: bold;
+            cursor: pointer;
+            
+    
+            img{
+                max-width: 55px;
+                width: auto;
+                height: 55px;
+                vertical-align: middle;
+            }
+    
+            span{
+                display: flex;
+                align-items: center;
+                width: 160px;
+                margin-left: 10px;
+                font-size: 14px;
+                font-weight: bold;
+            }
         }
     }
+
 }
 
 </style>

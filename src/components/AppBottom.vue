@@ -3,6 +3,61 @@
 
 export default {
   name: 'AppBottom',
+  data() {
+    return {
+        links: [
+            {
+                titolo: 'dc comics',
+                items: [
+                    'characters',
+                    'comics',
+                    'movies',
+                    'tv',
+                    'games',
+                    'collectibles',
+                    'videos',
+                    'fans',
+                    'news',
+                    'shop',
+                ]
+            },
+            {
+                titolo: 'shop',
+                items: [
+                    'Shop DC',
+                    'Shop DC Collectibles',
+                ]
+            },
+            {
+                titolo: 'dc',
+                items: [
+                    'Therms Of Use',
+                    'Privacy policy (new)',
+                    'Ad Choices',
+                    'Advertising',
+                    'Jobs',
+                    'Subscriptions',
+                    'Talent Workshops',
+                    'CPSC Certificates',
+                    'Ratings',
+                    'Shop Help',
+                    'Contact Us',
+                ]
+            },
+            {
+                titolo: 'sites',
+                items: [
+                    'DC',
+                    'MAD Magazine',
+                    'DC Kids',
+                    'DC Universe',
+                    'DC Power Visa',
+                ]
+            },
+        ]
+    }
+}
+
 }
 
 </script>
@@ -14,63 +69,18 @@ export default {
     
     <section>
         <div class="links-container">
-            <div class="link-left">
-                <div class="link">
-                    <h1>dc comics</h1>
-                    <ul>
-                        <li>Characters</li>
-                        <li>Comics</li>
-                        <li>Movies</li>
-                        <li>TV</li>
-                        <li>Games</li>
-                        <li>Videos</li>
-                        <li>News</li>
-                    </ul>
-                </div>
-                <div class="link">
-                    <h1>shop</h1>
-                    <ul>
-                        <li>Shop DC</li>
-                        <li>Shop DC Collectibles</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="link">
-                <h1>dc</h1>
+            <div class="link" v-for="link in links" :key="link.titolo">
+                <h1>{{ link.titolo }}</h1>
                 <ul>
-                    <li>Therms Of Use</li>
-                    <li>Privacy policy (new)</li>
-                    <li>Ad Choices</li>
-                    <li>Advertising</li>
-                    <li>Jobs</li>
-                    <li>Subscriptions</li>
-                    <li>Talent Workshops</li>
-                    <li>CPSC Certificates</li>
-                    <li>Ratings</li>
-                    <li>Shop Help</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-            <div class="link">
-                <h1>sites</h1>
-                <ul>
-                    <li>DC</li>
-                    <li>MAD Magazine</li>
-                    <li>DC Kids</li>
-                    <li>DC Universe</li>
-                    <li>DC Power Visa</li>
+                    <li v-for="item in link.items" :key="item">{{ item }}</li>
                 </ul>
             </div>
         </div>
+
+
         <img src="/img/dc-logo-bg.png" alt=" DC logo">
 
     </section>
- 
-
-    
-
-  
 
 </div>
 
@@ -81,14 +91,8 @@ export default {
 
 <style scoped lang="scss">
 // VARIABILI CSS
-$primaryColor: #0282f9;
-
-
-@mixin flex-centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@use '../_variables.scss' as *;
+@use '../mixin.scss' as *;
 
 .container{
 
@@ -136,10 +140,11 @@ $primaryColor: #0282f9;
                 opacity: .8;
                 cursor: pointer;
             }
-            
+
             li:hover{
                 opacity: 1;
             }
+
         }
 
     }
