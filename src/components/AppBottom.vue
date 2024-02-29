@@ -118,10 +118,11 @@ $primaryColor: #0282f9;
             padding: 20px;
 
             h1{
-            width: 150px;
+                width: 150px;
                 margin: 0;
                 text-transform: uppercase;
                 font-size: 22px;
+                cursor: pointer;
             }
     
             ul{
@@ -133,6 +134,11 @@ $primaryColor: #0282f9;
                 list-style-type: none;
                 font-size: 14px;
                 opacity: .8;
+                cursor: pointer;
+            }
+            
+            li:hover{
+                opacity: 1;
             }
         }
 

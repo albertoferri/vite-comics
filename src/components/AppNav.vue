@@ -2,6 +2,22 @@
 <script>
 export default {
   name: 'AppNav',
+  data() {
+        return {
+            links: [
+              'characters',
+              'comics',
+              'movies',
+              'tv',
+              'games',
+              'collectibles',
+              'videos',
+              'fans',
+              'news',
+              'shop',
+            ]
+        }
+    }
 }
 
 </script>
@@ -12,17 +28,11 @@ export default {
     <nav>
         <img src="/img/dc-logo.png" alt=" DC logo">
         <ul>
-          <li>characters</li>
-          <li>comics</li>
-          <li>movies</li>
-          <li>tv</li>
-          <li>games</li>
-          <li>collectibles</li>
-          <li>videos</li>
-          <li>fans</li>
-          <li>news</li>
-          <li>shop</li>
+          <li v-for="(link, index) in links" :key="index">
+            {{ link }}
+          </li>
         </ul>
+
     </nav>
   </div>
 </template>
