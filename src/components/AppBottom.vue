@@ -132,18 +132,19 @@ export default {
             ul{
                 padding: 0;
                 margin: 0;
+                
+                li{
+                    list-style-type: none;
+                    font-size: 14px;
+                    opacity: .8;
+                    cursor: pointer;
+                }
+    
+                li:hover{
+                    opacity: 1;
+                }
             }
             
-            li{
-                list-style-type: none;
-                font-size: 14px;
-                opacity: .8;
-                cursor: pointer;
-            }
-
-            li:hover{
-                opacity: 1;
-            }
 
         }
 

@@ -73,6 +73,10 @@ export default {
                 margin-left: 10px;
                 font-size: 14px;
                 font-weight: bold;
+
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }

@@ -39,14 +39,8 @@ export default {
 
 <style scoped lang="scss">
 // VARIABILI CSS
-$primaryColor: #0282f9;
-
-
-@mixin flex-centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@use '../_variables.scss' as *;
+@use '../mixin.scss' as *;
 
 .container{
   background-color: white;
@@ -67,18 +61,37 @@ $primaryColor: #0282f9;
 
     ul{
       display: flex;
-      gap: 30px;
       padding: 0;
+      margin: 0;
+
+      li{
+        list-style-type: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        cursor: pointer;
+        color: black;
+        min-height: 120px;
+        @include flex-centered;
+        border-bottom: 3px transparent solid;
+        padding: 0 10px;
+
+        
+  
+        &:hover{
+          color: $primaryColor;
+          border-color: $primaryColor;
+          transition: .2s ease-in-out;
+        }
+        &:not(:hover){
+          color: black;
+          border-color: transparent;
+          transition: .2s ease-in-out;
+        }
+      }
+
     }
 
-    li{
-      list-style-type: none;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 12px;
-      cursor: pointer;
-      color: black;
-    }
 
   }
 

@@ -51,12 +51,22 @@ export default {
     button{
       text-transform: uppercase;
       padding: 10px 14px;
-      border: 2px solid $primaryColor;
+      border: none;
       background-color: white;
       color: black;
       font-weight: bold;
       border-radius: 8px;
       cursor: pointer;
+
+      &:hover{
+        background-color: $primaryColor;
+        transition: .3s ease-in-out;
+      }
+
+      &:not(:hover){
+        background-color: white;
+        transition: .3s ease-in-out;
+      }
     }
     .social{
       @include flex-centered;
@@ -66,6 +76,10 @@ export default {
       li{
         list-style-type: none;
         cursor: pointer;
+
+        &:hover{
+          filter: invert(1);
+        }
       }
 
       li:first-child{
