@@ -1,11 +1,13 @@
 <script>
 import AppNav from './components/AppNav.vue';
 import AppWip from './components/AppWip.vue';
+import AppFindUs from './components/AppFindUs.vue';
 
 export default{
   components:{
     AppNav,
     AppWip,
+    AppFindUs,
   }
 }
 
@@ -15,6 +17,7 @@ export default{
 
   <AppNav></AppNav>
   <AppWip></AppWip>
+  <AppFindUs></AppFindUs>
 
 </template>
 
