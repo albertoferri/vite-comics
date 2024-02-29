@@ -61,7 +61,8 @@ $primaryColor: #0282f9;
       background-color: white;
       color: black;
       font-weight: bold;
-      border-radius: 8px
+      border-radius: 8px;
+      cursor: pointer;
     }
     .social{
       @include flex-centered;
@@ -70,13 +71,15 @@ $primaryColor: #0282f9;
 
       li{
         list-style-type: none;
+        cursor: pointer;
+      }
+
+      li:first-child{
+        color: $primaryColor;
+        font-weight: bold;
       }
     }
   }
-
-
-
-
 
 }
 
