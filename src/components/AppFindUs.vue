@@ -50,18 +50,20 @@ export default {
 
         display: flex;
         justify-content: space-between;
+        gap: 40px;
         padding: 0;
-
-        li:hover{
-          transition: .3s linear;
-          transform: scale(1.2em);
-        }
-
+        
         li{
             list-style-type: none;
             text-transform: uppercase;
             display: flex;
             cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
     
             img{
                 max-width: 55px;

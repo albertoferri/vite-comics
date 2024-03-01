@@ -99,15 +99,15 @@ export default {
   <div class="jumbo">
     <div class="jumbo-top"></div>
     <div class="jumbo-bottom">
-      <span id="currentSeries">CURRENT SERIES</span>
-
-      <div class="comic-list">
-
-        <AppComics v-for="currentComic in comics"
-        :comicImage="currentComic.thumb"
-        :comicTitle="currentComic.series"
-        ></AppComics>
-
+      
+      <div class="comic-container">
+        <span id="currentSeries">CURRENT SERIES</span>
+        <div class="comic-list">
+          <AppComics v-for="currentComic in comics"
+          :comicImage="currentComic.thumb"
+          :comicTitle="currentComic.series"
+          ></AppComics>
+        </div>
 
       </div>
 
@@ -130,7 +130,6 @@ export default {
 .jumbo{
   height: 1150px;
   
-  
   .jumbo-top{
     background-image: url('/img/jumbotron.jpg');
     background-size: cover;
@@ -138,19 +137,20 @@ export default {
   }
 
   .jumbo-bottom{
-
     height: 800px;
-    #currentSeries{
-      position: relative;
-      top: -20px;
-      left: 450px;
 
+    .comic-container{
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    #currentSeries{
+      
       font-size: 32px;
       background-color: $primaryColor;
       padding: 10px 14px;
-      border-radius: 10px;
       font-weight: bold;
-      pointer-events: none;
+      cursor: pointer;
     }
 
     .comic-list{
@@ -162,7 +162,6 @@ export default {
     }
 
     .row{
-
       @include flex-centered;
       .btn{
         padding: 12px 16px;
@@ -170,6 +169,13 @@ export default {
         background-color: $primaryColor;   
         border: none; 
         font-weight: bold;
+        cursor: pointer;
+
+        transition: .3s linear;
+
+        &:hover{
+          transform: scale(1.1);
+        }
       }
     }
 
