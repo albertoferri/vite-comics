@@ -97,11 +97,19 @@ export default {
 <template>
 
   <div class="jumbo">
-    <div class="jumbo-top">
-      <img src="../../public/img/jumbotron.jpg" alt="">
-    </div>
+    <div class="jumbo-top"></div>
     <div class="jumbo-bottom">
-      <span id="currentSeries">CURRENT SERIES</span>
+      <!-- <span id="currentSeries">CURRENT SERIES</span> -->
+
+      <div class="comic-list">
+
+        <AppComics v-for="currentComic in comics"
+        :comicImage="currentComic.thumb"
+        :comicTitle="currentComic.series"
+        ></AppComics>
+
+
+      </div>
 
     </div>
   </div>
@@ -116,28 +124,30 @@ export default {
 @use '../mixin.scss' as *;
 
 .jumbo{
-  height: 1070px;
+  height: 1150px;
   
   
   .jumbo-top{
-    img{
-      position: absolute;
-      max-height: 400px;
-      width: 100%;
-      object-fit: cover;
-      object-position: top,
-    }
+    background-image: url('../../public/img/jumbotron.jpg');
+    background-size: cover;
+    height: 400px;
   }
 
   .jumbo-bottom{
     #currentSeries{
-      position: relative;
       top: 370px;
       left: 140px;
 
       font-size: 32px;
       background-color: $primaryColor;
       padding: 8px 12px;
+    }
+
+    .comic-list{
+      display: flex;
+      flex-flow: row wrap;
+      width: 1200px;
+      margin: 20px auto;
     }
   }
 }
