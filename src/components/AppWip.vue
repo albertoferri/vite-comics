@@ -99,7 +99,7 @@ export default {
   <div class="jumbo">
     <div class="jumbo-top"></div>
     <div class="jumbo-bottom">
-      <!-- <span id="currentSeries">CURRENT SERIES</span> -->
+      <span id="currentSeries">CURRENT SERIES</span>
 
       <div class="comic-list">
 
@@ -109,6 +109,10 @@ export default {
         ></AppComics>
 
 
+      </div>
+
+      <div class="row">
+        <button class="btn">LOAD MORE</button>
       </div>
 
     </div>
@@ -124,23 +128,28 @@ export default {
 @use '../mixin.scss' as *;
 
 .jumbo{
-  height: 1070px;
+  height: 1150px;
   
   
   .jumbo-top{
-    background-image: url('../../public/img/jumbotron.jpg');
+    background-image: url('/img/jumbotron.jpg');
     background-size: cover;
     height: 400px;
   }
 
   .jumbo-bottom{
+
+    height: 800px;
     #currentSeries{
-      top: 370px;
-      left: 140px;
+      position: relative;
+      top: -20px;
+      left: 450px;
 
       font-size: 32px;
       background-color: $primaryColor;
-      padding: 8px 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: bold;
     }
 
     .comic-list{
@@ -150,6 +159,19 @@ export default {
       height: 600px;
       margin: 20px auto;
     }
+
+    .row{
+
+      @include flex-centered;
+      .btn{
+        padding: 12px 16px;
+        border-radius: 10px;
+        background-color: $primaryColor;   
+        border: none; 
+        font-weight: bold;
+      }
+    }
+
   }
 }
 
