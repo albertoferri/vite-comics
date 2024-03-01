@@ -19,7 +19,6 @@ export default{
 
   <AppNav></AppNav>
   <AppWip></AppWip>
-  <AppFindUs></AppFindUs>
   <AppBottom></AppBottom>
   <AppFooter></AppFooter>
 
