@@ -98,7 +98,7 @@ export default {
 
     background-image: url('/img/footer-bg.jpg');
     background-size: cover;
-    height: 370px;
+    height: 380px;
     
     section{
         display: flex;
@@ -114,12 +114,14 @@ export default {
         }
     }
     .links-container{
-        @include flex-centered;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         align-items: flex-start;
         padding: 20px 0;
+        gap: 10px;
 
         .link{
-            padding: 20px;
 
             h1{
                 width: 150px;

@@ -23,11 +23,11 @@ export default {
 
 <div class="container">
     <ul id="libraries">
-  <li v-for="(item, index) in items" :key="index">
-    <img :src="item.img" :alt="item.label">
-    <span>{{ item.label }}</span>
-  </li>
-</ul>
+      <li v-for="(item, index) in items" :key="index">
+        <img :src="item.img" :alt="item.label">
+        <span>{{ item.label }}</span>
+      </li>
+    </ul>
 
 </div>
 
