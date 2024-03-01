@@ -150,6 +150,7 @@ export default {
       padding: 10px 14px;
       border-radius: 10px;
       font-weight: bold;
+      pointer-events: none;
     }
 
     .comic-list{

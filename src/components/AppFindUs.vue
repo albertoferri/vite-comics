@@ -52,12 +52,16 @@ export default {
         justify-content: space-between;
         padding: 0;
 
+        li:hover{
+          transition: .3s linear;
+          transform: scale(1.2em);
+        }
+
         li{
             list-style-type: none;
             text-transform: uppercase;
             display: flex;
             cursor: pointer;
-            
     
             img{
                 max-width: 55px;
@@ -73,10 +77,6 @@ export default {
                 margin-left: 10px;
                 font-size: 14px;
                 font-weight: bold;
-
-                &:hover{
-                    text-decoration: underline;
-                }
             }
         }
     }

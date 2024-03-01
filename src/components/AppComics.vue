@@ -40,7 +40,6 @@ export default {
     padding: 20px;
 
     display: flex;
-    align-items: center;
     flex-direction: column;
     cursor: pointer;
 
@@ -51,15 +50,15 @@ export default {
     }
     
     img {
-        width: 186px;
+        width: 100%;
         height: 186px;
         object-fit: cover;
         object-position: top;
     }
 
     h4{
-        text-align: center;
-        max-height: 48px;
+        text-transform: uppercase;
+        padding: 10px 0;
     }
 
 
