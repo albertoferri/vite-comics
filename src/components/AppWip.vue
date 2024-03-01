@@ -124,7 +124,7 @@ export default {
 @use '../mixin.scss' as *;
 
 .jumbo{
-  height: 1150px;
+  height: 1070px;
   
   
   .jumbo-top{
@@ -147,6 +147,7 @@ export default {
       display: flex;
       flex-flow: row wrap;
       width: 1200px;
+      height: 600px;
       margin: 20px auto;
     }
   }

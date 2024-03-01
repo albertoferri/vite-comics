@@ -31,16 +31,17 @@ export default {
 
 <!-- --------QUI VA IL CSS RELATIVO A QUESTO COMPONENTE-------- -->
 <style scoped lang="scss">
+@use '../_variables.scss' as *;
+@use '../mixin.scss' as *;
 
 .comic {
     width: calc(100% / 6);
-    height: 350px;
+    height: 300px;
     padding: 20px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    flex-direction: column;
     cursor: pointer;
 
     transition: box-shadow 0.3s ease-in-out;
@@ -50,11 +51,15 @@ export default {
     }
     
     img {
-        width: 100%;
+        width: 186px;
+        height: 186px;
+        object-fit: cover;
+        object-position: top;
     }
 
     h4{
         text-align: center;
+        max-height: 48px;
     }
 
 
